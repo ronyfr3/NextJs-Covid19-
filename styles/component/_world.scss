@@ -1,0 +1,27 @@
+.world {
+  @include flex(column, center, center);
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  h1 {
+    color: white;
+    @include font-size($h1-font-sizes);
+    text-shadow: $ts1;
+  }
+  .world_info {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    p {
+      @include flex(row, center, center);
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0.5rem;
+      padding: 15px;
+      border-radius: 4px;
+      color: rgb(196, 199, 15);
+      span {
+        color: white;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}

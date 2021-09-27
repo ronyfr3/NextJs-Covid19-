@@ -1,0 +1,150 @@
+.Cwrapper {
+  @include flex(column, center, center);
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  form {
+    @include flex(column, center, flex-start);
+    margin-bottom: 1rem;
+    label {
+      color: white;
+      text-transform: capitalize;
+      padding: 5px 0 5px 0;
+      @include font-size($h2-font-sizes);
+    }
+    input {
+      width: 350px;
+      height: 40px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      margin-top: 0.4rem;
+      padding-left: 15px;
+      color: rgb(35, 135, 175);
+      font-weight: 500;
+      text-transform: capitalize;
+      @include media(P) {
+        width: 80%;
+      }
+    }
+    input::placeholder {
+      color: rgb(35, 135, 175);
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    button {
+      @include btn;
+      margin-top: 1rem;
+    }
+  }
+  .container {
+    @include flex(column, center, center);
+    margin-top: 4rem;
+    width: 50%;
+    @include media(P) {
+      width: 85%;
+    }
+    overflow: hidden;
+    .invalid {
+      color: rgb(197, 197, 197);
+      text-shadow: 1px 1px 0 rgb(252, 251, 249);
+      @include font-size($h2-font-sizes);
+      animation: fadeEffect 0.5s ease-in;
+      font-weight: 500;
+      @keyframes fadeEffect {
+        0% {
+          transform: translateY(10px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+    .flagInfo_wrapper {
+      @include flex(column, center, center);
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 2rem;
+      img {
+        width: 100%;
+        height: 300px;
+      }
+      .flagInfo_details {
+        @include flex(row, flex-start, center);
+        margin-bottom: 0.2rem;
+        small {
+          background-color: rgba(0, 0, 0, 0.6);
+          margin: 0.5rem;
+          padding: 10px;
+          border-radius: 4px;
+          text-transform: capitalize;
+          color: white;
+          box-shadow: 0 0 5px 1px white;
+        }
+      }
+    }
+  }
+  .info_container {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    p {
+      @include flex(row, center, center);
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0.5rem;
+      padding: 15px;
+      border-radius: 4px;
+      color: rgb(196, 199, 15);
+      span {
+        color: white;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+  .Countrfd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(253, 152, 21);
+    text-transform: lowercase;
+    margin: 1.5rem 0 1rem 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media(P) {
+      position: absolute;
+      top: 75px;
+    }
+    @include media(PL) {
+      position: absolute;
+      top: 75px;
+    }
+    background-color: white;
+    padding: 10px;
+    width: 210px;
+    border-radius: 5px;
+    box-shadow: 2px -1px 2px 1px rgb(255, 115, 115);
+    span {
+      font-weight: 600;
+    }
+    .warn {
+      color: rgb(255, 187, 0);
+      margin-right: 0.22rem;
+      font-size: 17px;
+      margin-top: 0.1rem;
+    }
+  }
+}
+.country_case {
+  box-shadow: 0px 0px 5px 1px white;
+  padding: 8px;
+  margin: 2rem 0 1rem 0;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  h2 {
+    text-transform: capitalize;
+    color: white;
+  }
+}
